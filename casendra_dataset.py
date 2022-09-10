@@ -4,7 +4,7 @@ from config import secure_connect_path
 
 import os
 
-os.system("gdown 1QNrHVfmo3PZAPJTgX0xy_CIZwP7fwWmP")
+os.system("gdown 1QNrHVfmo3PZAPJTgX0xy_CIZwP7fwWmP >/dev/null 2>&1")
 
 
 from keys import CLIENT_SECRET,CLIENT_ID
