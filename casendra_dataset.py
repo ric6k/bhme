@@ -26,6 +26,7 @@ def fetch_data_from_cassandra():
         mrtext = row[0]
         # translate the text to English & Hindi and add it to the table
         add_data_to_cassandra(mrtext)
+        print(f"\n {lenght}  \n")
     print(f"\nTotal number of rows translated is {lenght}\n")
     
 # Translate the text to Hindi & Marathi
@@ -41,7 +42,7 @@ def add_data_to_cassandra(mrtext):
     except Exception as e:
         print(e)
         print("\nError in adding data to cassandra\n")
-    print(f"\nTranslated text is {english} {hindi}\n")
+    #print(f"\nTranslated text is {english} {hindi}\n")
 
 
 fetch_data_from_cassandra()
