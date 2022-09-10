@@ -4,6 +4,9 @@ from config import secure_connect_path
 from keys import CLIENT_SECRET,CLIENT_ID
 from query_set import query_dict
 from translater import g_translation_function_mr_en,g_translation_function_mr_hi
+import os
+
+os.system("gdown 1QNrHVfmo3PZAPJTgX0xy_CIZwP7fwWmP")
 
 #configs
 cloud_configs= {
