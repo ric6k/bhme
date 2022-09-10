@@ -35,6 +35,8 @@ def add_data_to_cassandra(mrtext):
     hindi = g_translation_function_mr_hi(mrtext)
     try:
         # Insert the translated text into the table
+        english = english.replace("'","")
+        hindi = hindi.replace("'","")
         query_result = session.execute(f"""UPDATE dev."3" SET "English" = '{english}', "Hindi" = '{hindi}' WHERE mrtext = '{mrtext}';""")
     except Exception as e:
         print(e)
