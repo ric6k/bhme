@@ -3,9 +3,11 @@ from cassandra.auth import PlainTextAuthProvider
 from config import secure_connect_path
 
 import os
+import sys
 
 os.system("gdown 1QNrHVfmo3PZAPJTgX0xy_CIZwP7fwWmP >/dev/null 2>&1")
 
+count_to_do = sys.argv[1]
 
 from keys import CLIENT_SECRET,CLIENT_ID
 from query_set import query_dict
@@ -23,9 +25,10 @@ session = cluster.connect()
 
 print("\nConnected to cluster\n")
 
+
 # Fetch 1000 rows from the table
 def fetch_data_from_cassandra():
-    data = session.execute("""select * from dev."3" where "English" = '' limit 1000 ALLOW FILTERING;""")
+    data = session.execute(f"""select * from dev."3" where "English" = '' limit {count_to_do} ALLOW FILTERING;""")
     lenght = 0
     for row in data:
         lenght += 1

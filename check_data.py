@@ -12,6 +12,7 @@ import time
 cloud_configs= {
         'secure_connect_bundle': secure_connect_path
 }
+
 print("\nConnecting to Cassandra...\n")
 
 auth_provider = PlainTextAuthProvider(CLIENT_ID,CLIENT_SECRET)
