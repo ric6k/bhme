@@ -8,6 +8,8 @@ from tqdm import tqdm
 import os
 import time
 
+os.system("gdown 1QNrHVfmo3PZAPJTgX0xy_CIZwP7fwWmP >/dev/null 2>&1")
+
 #configs
 cloud_configs= {
         'secure_connect_bundle': secure_connect_path
