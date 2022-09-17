@@ -7,6 +7,11 @@ from translater import g_translation_function_mr_en,g_translation_function_mr_hi
 from tqdm import tqdm
 import os
 import time
+import sys
+
+os.system("gdown 1QNrHVfmo3PZAPJTgX0xy_CIZwP7fwWmP >/dev/null 2>&1")
+
+path = sys.argv[1] + "/"
 
 #configs
 cloud_configs= {
@@ -41,4 +46,4 @@ def get_data_locally(path):
                         row = session.execute(f"""INSERT INTO dev."3" (mrtext,"English","Hindi") VALUES ('{data[i]}','','');""")
                 time.sleep(100)
                 
-#get_data_locally("path to chunk of files")
+get_data_locally(path)
